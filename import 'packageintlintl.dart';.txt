@@ -1,0 +1,138 @@
+import 'package:intl/intl.dart';
+import 'dart:math';
+
+void main(){
+//   int x;
+//   double y;
+//   dynamic z;
+//   x = 10;
+//   y = 3.65;
+  
+//   z = "ABC";
+  
+// //   x: {x}
+//   print("x ${x}");
+//   print(y);
+//   print(z);
+  
+//   z = 0.99;
+//   print(z);
+  
+  
+//   int a, b,c;
+//   a= 10;
+//   b=5;
+//   c=3;
+  
+//   print("Result: ${a}+${b}*${c} = ${a+b*c}");
+  
+//   ------------------- var -----------------
+//   var x;
+//   x=5; print(x);
+//   x=3.66;print(x);
+//   x="dfdff"; print(x);
+//   x=true ; print(x);
+
+
+  
+// -----------------  conditional expression -----------------
+//   int age = 22;
+//   String text;
+//   text = age<18?"you are too old." : "welcome";
+//   print(text);
+  
+//   --------------- const , final ---------------
+//   const int a = 10;
+//   final int b = 20;
+  
+//   --------------- number ---------------
+//   double total = 2568542.25;
+//   var fmt = NumberFormat();
+//   var rand  = Random();
+//   var fmt = NumberFormat();
+  
+//   List<double> prices = [];
+//   for(int i=0; i<=10;i++){
+//     prices.add(rand.nextDouble()*100);
+// }
+
+//  for(double price in prices){
+//    print(fmt.format(price));
+//  }
+  
+  
+//   ------------------ map data -------------
+//   var product ={
+//    'id':999,
+//    'name': 'chocolate bar',
+//    'price': 100,
+//     'weight': 120
+//     };
+  
+//   print("ID : ${product['id']}");
+  
+//   Map<String, double> nationalIncome ={
+//     "THA": 15000,
+//     "KOR": 16000,
+//     "SGP": 17000,
+//     "LAO": 7000,
+//   };
+  
+//   nationalIncome["PHI"] = 10000;
+  
+//   nationalIncome.forEach((key, value){
+//     print("Country ${key}:${value}");
+    
+//   });
+   
+//   ------------------ null ---------------
+//   int?x = 5;
+//   x = null;
+  
+//   String? name = "John";
+//   name = null;
+  
+//   int y=x??0;
+//   String member = name??"n/a";
+  
+//   print(y);
+//   print(member);
+  
+//   int? c = getX();
+//   c=c!+1;
+//   print(c);
+// }
+
+// int? getX(){
+// return null;
+// }
+
+// class Product {
+//   late int id;
+//   late String name;
+//   late double price;
+// //   Product(this.id, this.name, this.price);
+// }
+
+// void main(){
+//   Product p = Product();
+//   p.id=999;
+//   p.name="Apple";
+//   p.price=70;
+  
+//   print(p.id);
+  
+// }
+
+class Product {
+  late int id;
+  late String name;
+  late double price;
+  Product(this.id, this.name, this.price);
+}
+
+void main(){
+  Product p = Product(999,"Apple",70); 
+  print(p.id);
+  
+}
