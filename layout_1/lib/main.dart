@@ -40,38 +40,17 @@ class MyApp extends StatelessWidget {
                   LogoWidget(
                     color: Colors.black,
                     color2: Colors.red,
+                    color3: Colors.blue,
                   ),
                   LogoWidget(
                     color: Colors.green,
                     color2: Colors.white,
+                    color3: Colors.black,
                   ),
                   LogoWidget(
                     color: Colors.blue,
                     color2: Colors.red,
-                  ),
-                  LogoWidget(
-                    color: Colors.yellow,
-                    color2: Colors.pink,
-                  ),
-                  LogoWidget(
-                    color: Colors.cyan,
-                    color2: Colors.white,
-                  ),
-                  LogoWidget(
-                    color: Colors.white,
-                    color2: Colors.red,
-                  ),
-                  LogoWidget(
-                    color: Colors.black,
-                    color2: Colors.red,
-                  ),
-                  LogoWidget(
-                    color: Colors.blue,
-                    color2: Colors.cyan,
-                  ),
-                  LogoWidget(
-                    color: Colors.blue,
-                    color2: Colors.red,
+                    color3: Colors.yellow,
                   ),
                 ],
               ),

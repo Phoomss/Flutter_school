@@ -3,14 +3,19 @@ import 'package:flutter/material.dart';
 class LogoWidget extends StatelessWidget {
   final Color color;
   final Color color2;
-  const LogoWidget({super.key, required this.color, required this.color2});
+  final Color color3;
+  const LogoWidget(
+      {super.key,
+      required this.color,
+      required this.color2,
+      required this.color3});
 
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
       Container(
         decoration: BoxDecoration(
-          color: Colors.amber[600],
+          color: color3,
           borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(20), bottomRight: Radius.circular(20)),
           boxShadow: const [
@@ -32,7 +37,7 @@ class LogoWidget extends StatelessWidget {
       Container(
         width: 40,
         height: 40,
-        decoration:  BoxDecoration(
+        decoration: BoxDecoration(
             color: color2,
             borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20),
