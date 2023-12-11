@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:layout_1/utils/theme.dart';
 import 'logo_widget.dart';
 
 void main() {
@@ -12,48 +13,56 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: "My App",
-        home: Scaffold(
-            appBar: AppBar(
-              title: const Text("My Application"),
-              leading: IconButton(
-                icon: const Icon(Icons.home_filled),
-                onPressed: () {},
-              ),
-              actions: [
-                IconButton(
-                  icon: const Icon(Icons.account_circle),
-                  onPressed: () {},
-                ),
-                IconButton(
-                  icon: const Icon(Icons.add_a_photo),
-                  onPressed: () {},
-                ),
-              ],
+      debugShowCheckedModeBanner: false,
+      theme: getThemeData(),
+      title: "My App",
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("My Application"),
+          leading: IconButton(
+            icon: const Icon(Icons.home_filled),
+            onPressed: () {},
+          ),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.account_circle),
+              onPressed: () {},
             ),
-            body: const SingleChildScrollView(
+            IconButton(
+              icon: const Icon(Icons.add_a_photo),
+              onPressed: () {},
+            ),
+          ],
+        ),
+        body: Column(
+          children: [
+            Text("Test Data", style: Theme.of(context).textTheme.bodyMedium),
+          const  SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  LogoWidget(
+                   LogoWidget(
                     color: Colors.black,
                     color2: Colors.red,
                     color3: Colors.blue,
                   ),
-                  LogoWidget(
+                   LogoWidget(
                     color: Colors.green,
                     color2: Colors.white,
                     color3: Colors.black,
                   ),
-                  LogoWidget(
+                   LogoWidget(
                     color: Colors.blue,
                     color2: Colors.red,
                     color3: Colors.yellow,
                   ),
                 ],
               ),
-            )));
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
