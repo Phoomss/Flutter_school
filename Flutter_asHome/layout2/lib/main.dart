@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
+
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,6 +54,7 @@ class MyApp extends StatelessWidget {
                   ],
                 ),
               ),
+
               Container(
                 margin: const EdgeInsets.only(left: 5),
                 child: Column(
@@ -63,6 +65,7 @@ class MyApp extends StatelessWidget {
                       style:
                           TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                     ),
+                    
                     GridView.builder(
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
