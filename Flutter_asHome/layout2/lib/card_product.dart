@@ -27,7 +27,7 @@ class CardProduct extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               Image.asset(
                 card, // Use the provided image path
                 height: 80,
@@ -35,7 +35,7 @@ class CardProduct extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               // Your card content goes here
-              Text(
+              const Text(
                 "Product Name",
                 style: TextStyle(
                   fontSize: 16,
@@ -43,7 +43,7 @@ class CardProduct extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 8),
-              Text(
+              const Text(
                 "\$19.99",
                 style: TextStyle(
                   fontSize: 14,
