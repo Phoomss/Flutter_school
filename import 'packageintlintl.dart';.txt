@@ -136,3 +136,21 @@ void main(){
   print(p.id);
   
 }
+ 
+  methods path คือ แก้ไขข้อมูลบางสวน
+methods push คือ แก้ไขข้อมูลทั้งหมด
+
+static เก็บพวก error page 
+templates เก็บพวก view
+
+${} == Expression Language: EL
+
+Fragment ชิ้นส่วน
+
+create widget 
+	- stl
+	- stf
+
+scaffold == เค้าโครงของแอป
+
+colorScheme === เอาไว้เก็บชุดสี เช่น สีพื้นหลัง สีของปุ่ม
