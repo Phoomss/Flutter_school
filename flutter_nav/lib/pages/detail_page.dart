@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_nav/Chapter.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import 'package:video_player/video_player.dart';
+import 'package:chewie/chewie.dart';
 
 class DetailPage extends StatefulWidget {
-  const DetailPage({super.key});
+  const DetailPage({Key? key}) : super(key: key);
 
   @override
   State<DetailPage> createState() => _DetailPageState();
@@ -36,8 +38,7 @@ class _DetailPageState extends State<DetailPage> {
   @override
   void initState() {
     super.initState();
-    id = int.parse(Get.parameters['id'] ??
-        ''); // Use int.parse to convert the String to int
+    id = int.parse(Get.parameters['id'] ?? '');
     fetchDetail(id);
   }
 
@@ -56,8 +57,25 @@ class _DetailPageState extends State<DetailPage> {
               itemBuilder: (context, index) {
                 final chapter = chapters[index];
                 return ListTile(
-                  title: Text(chapter.chUrl),
-                  // Add more details or customize ListTile as needed
+                  title: Column(
+                    children: [
+                      AspectRatio(
+                        aspectRatio: 16 / 9,
+                        child: Chewie(
+                          controller: ChewieController(
+                            videoPlayerController: VideoPlayerController.network(
+                              chapter.chUrl,
+                            ),
+                            aspectRatio: 16 / 9,
+                            autoPlay: false,
+                            looping: false,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 8), // Add some spacing if needed
+                      Text(chapter.chTitle),
+                    ],
+                  ),
                 );
               },
             ),
